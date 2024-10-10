@@ -54,7 +54,7 @@ public class DieRoller
                     donePlaying = true;
                 }
                 else
-                    System.out.println(playAgain + " is an invalid choice. Please pick Y/N.");
+                    System.out.println(playAgain + " is an invalid choice. Please pick Y/N: ");
 
 
             } while (!doneInput);
