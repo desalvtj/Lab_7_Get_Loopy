@@ -20,11 +20,10 @@ public class DieRoller
 
 
 
-       // do {
-
+        do {
             System.out.println(" Roll    Die1    Die2    Die3    Sum");
             System.out.println("-------------------------------------");
-            while (die1 != die2 && die1 != die3) {
+            do{
 
                 die1 = gen.nextInt(6) + 1;
                 die2 = gen.nextInt(6) + 1;
@@ -36,28 +35,32 @@ public class DieRoller
                 System.out.printf("%4d\t%4d\t%4d\t%4d\t%4d\n", roll, die1, die2, die3, dieRoll);
 
 
-            }
+            }while (!(die1 == die2 && die1 == die3));
 
-//            do {
-//                System.out.print("Would you like to play again? [Y/N]: ");
-//                playAgain = in.nextLine();
-//                if (playAgain.equalsIgnoreCase("Y")) {
-//                    doneInput = true;
-//                    die1 = -1;
-//                    die2 = 0;
-//                    die3 = 0;
-//                    roll = 0;
-//                } else if (playAgain.equalsIgnoreCase("N")) {
-//                    System.out.println("Thanks for playing!");
-//                    doneInput = true;
-//                    donePlaying = true;
-//                } else
-//                    System.out.println(playAgain + " is an invalid choice. Please pick Y/N.");
-//
-//            } while (!doneInput);
-//
-//
-//        }while (!donePlaying);
+                doneInput = false;
+
+            do {
+                System.out.print("Would you like to play again? [Y/N]: ");
+                playAgain = in.nextLine();
+                if (playAgain.equalsIgnoreCase("Y"))
+                {
+                    doneInput = true;
+                    roll = 0;
+                }
+                else if (playAgain.equalsIgnoreCase("N"))
+                {
+                    System.out.println("Thanks for playing!");
+                    doneInput = true;
+                    donePlaying = true;
+                }
+                else
+                    System.out.println(playAgain + " is an invalid choice. Please pick Y/N.");
+
+
+            } while (!doneInput);
+
+
+        }while (!donePlaying);
 
     }
 
