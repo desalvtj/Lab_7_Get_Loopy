@@ -14,10 +14,14 @@ public class DieRoller
         int die3 = 0;
         int roll = 0;
         int dieRoll = 0;
-        boolean doneRoll = false;
+        String playAgain = "";
+        boolean doneInput = false;
+        boolean donePlaying = false;
 
 
-        do {
+
+       // do {
+
             System.out.println(" Roll    Die1    Die2    Die3    Sum");
             System.out.println("-------------------------------------");
             while (die1 != die2 && die1 != die3) {
@@ -33,7 +37,27 @@ public class DieRoller
 
 
             }
-        }while(!doneRoll);
+
+//            do {
+//                System.out.print("Would you like to play again? [Y/N]: ");
+//                playAgain = in.nextLine();
+//                if (playAgain.equalsIgnoreCase("Y")) {
+//                    doneInput = true;
+//                    die1 = -1;
+//                    die2 = 0;
+//                    die3 = 0;
+//                    roll = 0;
+//                } else if (playAgain.equalsIgnoreCase("N")) {
+//                    System.out.println("Thanks for playing!");
+//                    doneInput = true;
+//                    donePlaying = true;
+//                } else
+//                    System.out.println(playAgain + " is an invalid choice. Please pick Y/N.");
+//
+//            } while (!doneInput);
+//
+//
+//        }while (!donePlaying);
 
     }
 
